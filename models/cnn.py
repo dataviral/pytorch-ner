@@ -91,7 +91,7 @@ if __name__ == "__main__":
     expected_output_shape = (B, T, model_config["n_classes"])
 
     model = CnnNER(**model_config)
-    outputs = model(inputs, eval=False)
+    outputs = model(inputs, output_eval=False)
 
     assert outputs.shape == expected_output_shape
     print(f"input: {inputs.shape})")
